@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                         tts?.speak("Object Detection Initialised", TextToSpeech.QUEUE_FLUSH, null, null)
                         startDetection()
                     } else if (spokenText.contains("stop detection") || spokenText.contains("stop detecting")) {
-                        tts?.speak("Object Detection De-Initialised", TextToSpeech.QUEUE_FLUSH, null, null)
+                        tts?.speak("Object Detection Terminated", TextToSpeech.QUEUE_FLUSH, null, null)
                         stopDetection()
                     }else if (spokenText.contains("navigate to")) {
                         destination = spokenText.substringAfter("navigate to").trim()

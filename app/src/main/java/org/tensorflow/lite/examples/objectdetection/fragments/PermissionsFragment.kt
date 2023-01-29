@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
 import org.tensorflow.lite.examples.objectdetection.R
 
-private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
+private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
 
 /**
  * The sole purpose of this fragment is to request permissions and, once granted, display the
@@ -20,24 +20,40 @@ private val PERMISSIONS_REQUIRED = arrayOf(Manifest.permission.CAMERA)
  */
 class PermissionsFragment : Fragment() {
 
-    private val requestPermissionLauncher =
+    private val requestCameraPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                Toast.makeText(context, "Permission request granted", Toast.LENGTH_LONG).show()
-                navigateToCamera()
+                Toast.makeText(context, "Camera permission request granted", Toast.LENGTH_LONG).show()
+                requestMicrophonePermission()
             } else {
-                Toast.makeText(context, "Permission request denied", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Camera permission request denied", Toast.LENGTH_LONG).show()
+            }
+        }
+
+    private val requestMicrophonePermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()
+        ) { isGranted: Boolean ->
+            if (isGranted) {
+                Toast.makeText(context, "Microphone permission request granted", Toast.LENGTH_LONG).show()
+
+            } else {
+                Toast.makeText(context, "Microphone permission request denied", Toast.LENGTH_LONG).show()
             }
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
+            requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
         }
     }
 
+    private fun requestMicrophonePermission() {
+        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            requestMicrophonePermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+        }
+    }
 
     public fun navigateToCamera() {
         lifecycleScope.launchWhenStarted {
