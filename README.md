@@ -11,9 +11,11 @@ This blind navigation system is designed to assist visually impaired individuals
 
 ## Three essential commands
 
+```
 ### *Start Detection or Start Detecting* - Triggers Object Detection
 ### *Stop Detection or Stop Detecting* - Haults Object Detection
 ### *Navigate to [Desired Location]* - Navigates to user required space automatically
+```
 
 We have enabled RAYS with many useful features,
 
