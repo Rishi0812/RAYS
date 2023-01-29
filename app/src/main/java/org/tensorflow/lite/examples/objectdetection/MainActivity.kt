@@ -71,12 +71,15 @@ class MainActivity : AppCompatActivity() {
                 if (result != null && result.isNotEmpty()) {
                     val spokenText = result[0]
                     Toast.makeText(context, spokenText, Toast.LENGTH_SHORT).show()
-                    if (spokenText.contains("start detection")) {
+                    if (spokenText.contains("start detection") || spokenText.contains("start detecting"))  {
+                        tts?.speak("Object Detection Initialised", TextToSpeech.QUEUE_FLUSH, null, null)
                         startDetection()
-                    } else if (spokenText.contains("stop detection")) {
+                    } else if (spokenText.contains("stop detection") || spokenText.contains("stop detecting")) {
+                        tts?.speak("Object Detection De-Initialised", TextToSpeech.QUEUE_FLUSH, null, null)
                         stopDetection()
                     }else if (spokenText.contains("navigate to")) {
                         destination = spokenText.substringAfter("navigate to").trim()
+                        tts?.speak("Navigating Maps", TextToSpeech.QUEUE_FLUSH, null, null)
                         startNavigation(destination)
                     }else{
                         startListening()
@@ -114,6 +117,7 @@ class MainActivity : AppCompatActivity() {
             detectionRunning = false
             val navController = Navigation.findNavController(context as Activity, R.id.fragment_container)
             navController.navigate(R.id.action_camera_to_fragments)
+            startListening()
         }
     }
 
@@ -128,6 +132,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Destination not set", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
