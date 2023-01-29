@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         if (detectionRunning) {
             detectionRunning = false
             val navController = Navigation.findNavController(context as Activity, R.id.fragment_container)
-            navController.navigate(R.id.action_camera_to_permissions)
+            navController.navigate(R.id.action_camera_to_fragments)
         }
     }
 
