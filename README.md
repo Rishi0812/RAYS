@@ -9,6 +9,11 @@ This blind navigation system is designed to assist visually impaired individuals
 <img src="https://user-images.githubusercontent.com/56316487/215317093-2ec1790c-b1f3-4ce0-837e-b683c1cedcb9.jpeg" width="150" height="300"> <img src="https://user-images.githubusercontent.com/56316487/215317096-4b7e68d9-41c9-49cb-b868-f6d4e4244361.jpeg" width="150" height="300">
 <img src="https://user-images.githubusercontent.com/56316487/215317099-4263ddaa-274a-4bf7-8a60-d94f80d6a299.jpeg" width="150" height="300">
 
+## Three essential commands
+
+### *Start Detection or Start Detecting* - Triggers Object Detection
+### *Stop Detection or Stop Detecting* - Haults Object Detection
+### *Navigate to [Desired Location]* - Navigates to user required space automatically
 
 We have enabled RAYS with many useful features,
 
