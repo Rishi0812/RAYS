@@ -6,9 +6,9 @@
 This blind navigation system is designed to assist visually impaired individuals in navigating their surroundings. The system utilizes various sensors, such as cameras, microphones, and ultrasonic sensors, to gather information about the environment and provide verbal feedback to the user through audio-based navigation systems. These systems use speech synthesis to provide verbal instructions to the user and many more.
 
 
-![WhatsApp Image 2023-01-29 at 10 08 10 AM](https://user-images.githubusercontent.com/56316487/215316932-7396e905-2ad4-4025-a109-14ebc273c367.jpeg)
-![WhatsApp Image 2023-01-29 at 10 08 11 AM (1)](https://user-images.githubusercontent.com/56316487/215316949-b801ad5b-aded-4d94-bf40-494e0fdab99d.jpeg)
-![WhatsApp Image 2023-01-29 at 10 08 09 AM](https://user-images.githubusercontent.com/56316487/215316955-5bee9639-e704-4db6-aff4-37691511e020.jpeg)
+![WhatsApp Image 2023-01-29 at 10 08 10 AM|320x271,50%](https://user-images.githubusercontent.com/56316487/215316932-7396e905-2ad4-4025-a109-14ebc273c367.jpeg)
+![WhatsApp Image 2023-01-29 at 10 08 11 AM (1)|320x271,50%](https://user-images.githubusercontent.com/56316487/215316949-b801ad5b-aded-4d94-bf40-494e0fdab99d.jpeg)
+![WhatsApp Image 2023-01-29 at 10 08 09 AM|320x271,50%](https://user-images.githubusercontent.com/56316487/215316955-5bee9639-e704-4db6-aff4-37691511e020.jpeg)
 
 
 We have enabled RAYS with many useful features,
