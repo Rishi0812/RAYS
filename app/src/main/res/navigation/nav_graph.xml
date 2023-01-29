@@ -31,5 +31,11 @@
             app:popUpTo="@id/camera_fragment"
             app:popUpToInclusive="true"/>
 
+        <action
+            android:id="@+id/action_camera_to_fragments"
+            app:destination="@id/permissions_fragment"
+            app:popUpTo="@id/camera_fragment"
+            app:popUpToInclusive="true"/>
+
     </fragment>
 </navigation>

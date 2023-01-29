@@ -63,8 +63,7 @@ class MainActivity : AppCompatActivity() {
                         startDetection()
                     } else if (spokenText.contains("stop detection")) {
                         stopDetection()
-                    }
-                    else{
+                    }else{
                         startListening()
                     }
                     if(detectionRunning){
@@ -107,9 +106,11 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun stopDetection() {
-        // Your code to stop object detection here
-        val navController = Navigation.findNavController(context as Activity, R.id.fragment_container)
-        navController.navigateUp()
+        if (detectionRunning) {
+            detectionRunning = false
+            val navController = Navigation.findNavController(context as Activity, R.id.fragment_container)
+            navController.navigate(R.id.action_camera_to_permissions)
+        }
     }
 
 
