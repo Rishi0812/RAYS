@@ -35,5 +35,5 @@ RAYS has many features, to name few
 
 RAYS is just a start to few of the many features told, RAYS has the capability to include and improve over a large set of features according to users choice and we'll never start innovating.
 
-Disclaimer:
+##Disclaimer:
 We will be updating the application in order to use Google cloud and AMD Instances for easier and faster access.
